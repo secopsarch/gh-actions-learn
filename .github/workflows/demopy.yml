@@ -14,7 +14,7 @@ jobs:
         - run: pip install flask
         - run: python --version
         - run: python demoapp.py
+          working-directory: ./demoapp
         - run: | #exit after 30sec
             sleep 30
             exit 0 
-          working-directory: ./demoapp
