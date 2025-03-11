@@ -12,6 +12,7 @@ jobs:
       steps:
         - uses: actions/checkout@v4
         - run: pip install flask
+        - run: python --version
         - run: python demoapp.py
         - run: | #exit after 30sec
             sleep 30
