@@ -1,0 +1,17 @@
+name: pyapi-demo
+on:
+    push: 
+       paths:
+         - ".github/workflows/demoapp.yml"
+         - "demoapp/**"
+    workflow_dispatch: #manualrun
+jobs:
+   build:
+      name: build-python-api
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - run: pip install flask
+        - run: python --version
+        - run: python demoapp.py
+          working-directory: ./demoapp
