@@ -2,7 +2,7 @@ name: pyapi-demo
 on:
     push: 
        paths:
-         - ".github/workflows/demoapp.yml"
+         - ".github/workflows/demopy.yml"
          - "demoapp/**"
     workflow_dispatch: #manualrun
 jobs:
