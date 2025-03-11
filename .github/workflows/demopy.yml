@@ -13,7 +13,7 @@ jobs:
         - uses: actions/checkout@v4
         - run: pip install flask
         - run: python demoapp.py
-        - run: |
+        - run: | #exit after 30sec
             sleep 30
-            exit 0
+            exit 0 
           working-directory: ./demoapp
