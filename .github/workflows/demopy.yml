@@ -16,6 +16,8 @@ jobs:
           name: display all the foder contents
         - run: pip install flask
         - run: python --version
+        - uses: actions/setup-python@v5
+        - run: python --version
         - run: python demoapp.py
           working-directory: ./demoapp
           name: run the python-demo app
