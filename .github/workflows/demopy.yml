@@ -8,17 +8,17 @@ on:
 jobs:
    build:
       name: build-python-api
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
       steps:
         - run: pwd && ls -al
         - uses: actions/checkout@v4
+        - run: python --version
         - run: pwd && ls -al
           name: display all the foder contents
-        - run: pip install flask
-        - run: python --version
         - uses: actions/setup-python@v5
           with:
             python-version: '3.8' 
+        - run: pip install flask
         - run: python --version
         - run: python demoapp.py
           working-directory: ./demoapp
