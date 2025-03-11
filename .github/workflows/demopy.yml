@@ -13,7 +13,9 @@ jobs:
         - run: pwd && ls -al
         - uses: actions/checkout@v4
         - run: pwd && ls -al
+          name: display all the foder contents
         - run: pip install flask
         - run: python --version
         - run: python demoapp.py
           working-directory: ./demoapp
+          name: run the python-demo app
