@@ -9,7 +9,7 @@ on:
 #  schedule:
     - cron: "0/2 * * * *"
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-#  workflow_dispatch: #manual
+  workflow_dispatch: #manual
 jobs:
   # This workflow contains a single job called "build"
   build:
